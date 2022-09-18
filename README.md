@@ -1,5 +1,11 @@
 # Exauth
 
+- Users
+  - Register
+  - Login
+  - Logout
+  - Get Authenticated User
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
@@ -9,6 +15,13 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+
+## commands
+```sh
+mix phx.gen.context Accounts User users username:string email:string password:string
+mix phx.gen.context AuthTokens AuthToken auth_tokens token:text user_id:references:users
+mix ecto.migrate
+```
 
 ## Learn more
 
